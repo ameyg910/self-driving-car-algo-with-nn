@@ -6,9 +6,9 @@ class Car{
         this.height=height; 
         
         this.speed=0,
-        this.acceleration=0.2, 
-        this.maxSpeed=3,
-        this.friction=0.05
+        this.acceleration=0.8, 
+        this.maxSpeed=12,
+        this.friction=0.2
         this.angle=0; 
         this.controls = new Controls();
     }
@@ -40,10 +40,10 @@ class Car{
         if(this.speed!=0){
             const flip=this.speed>0?1:-1;
         if(this.controls.left){
-            this.angle+=0.03*flip;
+            this.angle+=0.12*flip;
         }
         if(this.controls.right){
-            this.angle-=0.03*flip; 
+            this.angle-=0.12*flip; 
         }
     }
         this.x-=Math.sin(this.angle)*this.speed; 
